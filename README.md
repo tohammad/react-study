@@ -1,3 +1,3 @@
 # react-study
-Create React APP without CLI
-Why use Context API instead of props
+1. Create React APP without CLI
+2. Why use Context API instead of props
