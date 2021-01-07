@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>React App</title>
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<style>
+#root [data-reactroot] {
+    color: blue;
+    height: 100%;
+    padding: 50px 50px;
+    border: 4px dotted red;
+    margin: 10px;
+}
+</style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    window.onload = function()
+    {
+        class Greetings extends React.Component
+        {
+            render()
+            {
+                return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
+            }
+        }
+
+        ReactDOM.render(
+            //React.createElement(Greetings, { name : 'Hammad' }),
+            React.createElement('div', null, 
+            React.createElement(Greetings, {name: 'Name1'}),
+            React.createElement(Greetings, {name: 'Name2'}),
+            React.createElement(Greetings, {name: 'Name3'}),
+            ),
+            document.getElementById('root')
+        );
+    };
+</script>
+
+</html>

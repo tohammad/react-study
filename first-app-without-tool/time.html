@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Time App</title>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    function showtime() {
+        const element = (
+            <div>
+                <h1>Have a Nice Day!</h1>
+                <h2>Now its {new
+                Date().toLocaleTimeString()}.</h2>
+            </div>
+        );
+      ReactDOM.render(React.createElement(element, null), document.getElementById("root"));
+    }
+    setInterval(showtime, 500);
+  </script>
+</html>
